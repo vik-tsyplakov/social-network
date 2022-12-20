@@ -59,6 +59,32 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+ul {
+  list-style-type: none;
+}
 
 .app-wrapper {
+  display: grid;
+  width: 1440px;
+  margin: 0 auto;
+  grid-template-areas:
+    "header header"
+    "nav contentMain";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+}
+.header {
+  grid-area: header;
+  background-color: aquamarine;
+}
+.nav {
+  grid-area: nav;
+  background-color: rgb(242, 255, 127);
+}
+.content {
+  grid-area: contentMain;
+  background-color: azure;
+}
+.avatarAndPosts {
+  display: flex;
 }
