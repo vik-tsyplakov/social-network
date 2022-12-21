@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import bird from "./img/mainContent/bird.jpg";
 import avatar from "./img/mainContent/avatar.png";
 
@@ -7,15 +8,7 @@ function App() {
   return (
     <div className="app-wrapper">
       <Header />
-      <nav className="nav">
-        <ul>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>News</li>
-          <li>Music</li>
-          <li>Setting</li>
-        </ul>
-      </nav>
+      <Navbar />
       <div className="content">
         <div>
           <img src={bird} className="imgContent" alt="content" />
