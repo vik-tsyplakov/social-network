@@ -74,26 +74,3 @@ ul {
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
 }
-.header {
-  grid-area: header;
-  background-color: aquamarine;
-}
-.nav {
-  grid-area: nav;
-  background-color: rgb(242, 255, 127);
-}
-.content {
-  grid-area: contentMain;
-  background-color: azure;
-}
-.imgContent {
-  max-width: 100%;
-  height: auto;
-}
-.avatarAndPosts {
-  display: flex;
-}
-.avatar {
-  max-width: 150px;
-  max-height: 150px;
-}
