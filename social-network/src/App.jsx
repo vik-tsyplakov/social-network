@@ -1,14 +1,12 @@
 import "./App.css";
-import logo from "./img/header/logo.svg";
+import Header from "./components/Header";
 import bird from "./img/mainContent/bird.jpg";
 import avatar from "./img/mainContent/avatar.png";
 
 function App() {
   return (
     <div className="app-wrapper">
-      <header className="header">
-        <img src={logo} width="24" height="24" alt="logo" />
-      </header>
+      <Header />
       <nav className="nav">
         <ul>
           <li>Profile</li>
