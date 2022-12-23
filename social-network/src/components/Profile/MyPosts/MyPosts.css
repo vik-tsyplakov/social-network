@@ -7,9 +7,6 @@
   height: auto;
 }
 .avatarAndPosts {
-  display: block;
-}
-.avatarAndDescription {
   display: flex;
 }
 .avatar {
