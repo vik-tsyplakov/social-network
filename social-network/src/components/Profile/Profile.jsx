@@ -1,7 +1,7 @@
 import React from "react";
 import "./Profile.css";
-import bird from "./../img/mainContent/bird.jpg";
-import avatar from "./../img/mainContent/avatar.png";
+import bird from "./../../img/mainContent/bird.jpg";
+import avatar from "./../../img/mainContent/avatar.png";
 
 export default function Profile() {
   return (
