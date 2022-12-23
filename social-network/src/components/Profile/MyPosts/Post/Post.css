@@ -1,0 +1,12 @@
+.post {
+  display: flex;
+  align-items: center;
+}
+.post__avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.post__text {
+  margin-left: 10px;
+}
