@@ -74,3 +74,7 @@ ul {
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
 }
+.content {
+  grid-area: contentMain;
+  background-color: rgb(197, 253, 253);
+}
