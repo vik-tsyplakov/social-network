@@ -8,19 +8,29 @@ export default function Navbar() {
     <nav className="nav">
       <ul>
         <li>
-          <NavLink to="/profile"> Profile</NavLink>
+          <NavLink className="nav__link" to="/profile">
+            Profile
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/dialogs"> Messages</NavLink>
+          <NavLink className="nav__link" to="/dialogs">
+            Messages
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/news"> News</NavLink>
+          <NavLink className="nav__link" to="/news">
+            News
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/music"> Music</NavLink>
+          <NavLink className="nav__link" to="/music">
+            Music
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/setting"> Setting</NavLink>
+          <NavLink className="nav__link" to="/setting">
+            Setting
+          </NavLink>
         </li>
       </ul>
     </nav>
