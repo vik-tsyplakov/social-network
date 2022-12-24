@@ -1,12 +1,17 @@
 .post {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 .post__avatar {
   border-radius: 50%;
   width: 60px;
   height: 60px;
 }
-.post__text {
+.post__container {
+  display: block;
   margin-left: 10px;
+}
+.post__text {
+  margin-bottom: 3px;
 }
