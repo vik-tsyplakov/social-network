@@ -6,10 +6,10 @@ export default function Navbar() {
     <nav className="nav">
       <ul>
         <li>
-          <a href=""> Profile</a>
+          <a href="/profile"> Profile</a>
         </li>
         <li>
-          <a href=""> Messages</a>
+          <a href="/dialogs"> Messages</a>
         </li>
         <li>
           <a href=""> News</a>
