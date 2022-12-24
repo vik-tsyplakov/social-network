@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -6,19 +8,19 @@ export default function Navbar() {
     <nav className="nav">
       <ul>
         <li>
-          <a href="/profile"> Profile</a>
+          <NavLink to="/profile"> Profile</NavLink>
         </li>
         <li>
-          <a href="/dialogs"> Messages</a>
+          <NavLink to="/dialogs"> Messages</NavLink>
         </li>
         <li>
-          <a href="/news"> News</a>
+          <NavLink to="/news"> News</NavLink>
         </li>
         <li>
-          <a href="/music"> Music</a>
+          <NavLink to="/music"> Music</NavLink>
         </li>
         <li>
-          <a href="/setting"> Setting</a>
+          <NavLink to="/setting"> Setting</NavLink>
         </li>
       </ul>
     </nav>
