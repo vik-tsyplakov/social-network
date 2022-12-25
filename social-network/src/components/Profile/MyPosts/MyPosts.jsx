@@ -7,7 +7,9 @@ export default function MyPosts() {
     <div className="myPosts">
       <p>My posts</p>
       <div className="newPost">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div className="">
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
         <button>Send</button>
       </div>
       <Post message="It is my first post" likesCount={12} />
