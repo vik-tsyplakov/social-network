@@ -2,13 +2,3 @@
   max-width: 100%;
   height: auto;
 }
-.avatarAndPosts {
-  display: block;
-}
-.avatarAndDescription {
-  display: flex;
-}
-.avatar {
-  max-width: 150px;
-  max-height: 150px;
-}
