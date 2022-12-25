@@ -1,6 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Dialogs.css";
+import DialogItem from "./DialogItem/DialogItem";
+
+const Message = (props) => {
+  return <div className="dialogs__message">{props.message}</div>;
+};
 
 export default function Dialogs(props) {
   return (
@@ -8,29 +12,17 @@ export default function Dialogs(props) {
       <p>Dialogs</p>
       <div className="dialogs">
         <div className="dialogs__items">
-          <div className="dialogs__item">
-            <NavLink to="/dialogs/1">Nick</NavLink>
-          </div>
-          <div className="dialogs__item">
-            <NavLink to="/dialogs/2">John</NavLink>
-          </div>
-          <div className="dialogs__item">
-            <NavLink to="/dialogs/3">Ivan</NavLink>
-          </div>
-          <div className="dialogs__item">
-            <NavLink to="/dialogs/4">Anna</NavLink>
-          </div>
-          <div className="dialogs__item">
-            <NavLink to="/dialogs/5">Alex</NavLink>
-          </div>
-          <div className="dialogs__item">
-            <NavLink to="/dialogs/6">Harry</NavLink>
-          </div>
+          <DialogItem name="Nick" id="1" />
+          <DialogItem name="John" id="2" />
+          <DialogItem name="Ivan" id="3" />
+          <DialogItem name="Anna" id="4" />
+          <DialogItem name="Alex" id="5" />
+          <DialogItem name="Harry" id="6" />
         </div>
         <div className="dialogs__messages">
-          <div className="dialogs__message">Hi!</div>
-          <div className="dialogs__message">What`s up?</div>
-          <div className="dialogs__message">Where are you?</div>
+          <Message message="Hi!" />
+          <Message message="What`s up?" />
+          <Message message="Where are you?" />
         </div>
       </div>
     </div>
