@@ -4,7 +4,7 @@ import "./Dialogs.css";
 
 export default function Dialogs(props) {
   return (
-    <div className="content">
+    <div>
       <p>Dialogs</p>
       <div className="dialogs">
         <div className="dialogs__items">

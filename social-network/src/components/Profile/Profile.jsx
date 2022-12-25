@@ -6,7 +6,7 @@ import avatar from "./../../img/mainContent/avatar.png";
 
 export default function Profile() {
   return (
-    <div className="content">
+    <div>
       <div>
         <img src={bird} className="imgContent" alt="content" />
       </div>
