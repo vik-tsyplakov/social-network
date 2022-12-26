@@ -8,7 +8,7 @@ export default function Post(props) {
       <img className="post__avatar" src={avatar} alt="user" />
       <div className="post__container">
         <p className="post__text">{props.message}</p>
-        <p className="post__likesCount">like {props.likesCount}</p>
+        <p className="post__likesCount">likes {props.likesCount}</p>
       </div>
     </div>
   );
