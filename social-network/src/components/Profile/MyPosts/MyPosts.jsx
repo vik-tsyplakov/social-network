@@ -10,6 +10,10 @@ export default function MyPosts() {
     { id: 4, message: "How are you?", likesCount: "0" },
   ];
 
+  let postsElements = postsData.map((post) => (
+    <Post message={post.message} id={post.id} likesCount={post.likesCount} />
+  ));
+
   return (
     <div className="myPosts">
       <p>My posts</p>
@@ -19,22 +23,7 @@ export default function MyPosts() {
         </div>
         <button>Send</button>
       </div>
-      <Post
-        message={postsData[0].message}
-        likesCount={postsData[0].likesCount}
-      />
-      <Post
-        message={postsData[1].message}
-        likesCount={postsData[1].likesCount}
-      />
-      <Post
-        message={postsData[2].message}
-        likesCount={postsData[2].likesCount}
-      />
-      <Post
-        message={postsData[3].message}
-        likesCount={postsData[3].likesCount}
-      />
+      <div className="posts">{postsElements}</div>
     </div>
   );
 }
