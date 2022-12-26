@@ -22,26 +22,20 @@ export default function Dialogs(props) {
     { id: 6, message: "I like it" },
   ];
 
+  let dialogsElements = dialogsData.map((dialog) => (
+    <DialogItem name={dialog.name} id={dialog.id} />
+  ));
+
+  let messagesElements = messagesData.map((message) => (
+    <Message message={message.message} id={message.id} />
+  ));
+
   return (
     <div>
       <p>Dialogs</p>
       <div className="dialogs">
-        <div className="dialogs__items">
-          <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-          <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-          <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
-          <DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
-          <DialogItem name={dialogsData[4].name} id={dialogsData[4].id} />
-          <DialogItem name={dialogsData[5].name} id={dialogsData[5].id} />
-        </div>
-        <div className="dialogs__messages">
-          <Message message={messagesData[0].message} id={messagesData[0].id} />
-          <Message message={messagesData[1].message} id={messagesData[1].id} />
-          <Message message={messagesData[2].message} id={messagesData[2].id} />
-          <Message message={messagesData[3].message} id={messagesData[3].id} />
-          <Message message={messagesData[4].message} id={messagesData[4].id} />
-          <Message message={messagesData[5].message} id={messagesData[5].id} />
-        </div>
+        <div className="dialogs__items">{dialogsElements}</div>
+        <div className="dialogs__messages">{messagesElements}</div>
       </div>
     </div>
   );
