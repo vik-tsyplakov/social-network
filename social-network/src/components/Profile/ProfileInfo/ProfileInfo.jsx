@@ -13,7 +13,7 @@ export default function ProfileInfo() {
         <p>Education: KPI'18</p>
         <p>
           Web Site:
-          <a href="https://github.com/vik-tsyplakov">
+          <a href="https://github.com/vik-tsyplakov" target="_blank">
             github.com/vik-tsyplakov
           </a>
         </p>
