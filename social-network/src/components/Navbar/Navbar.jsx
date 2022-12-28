@@ -30,6 +30,11 @@ export default function Navbar() {
           <NavLink className="nav__link" to="/setting">
             Setting
           </NavLink>
+          <li>
+            <NavLink className="nav__link" to="/friends">
+              Friends
+            </NavLink>
+          </li>
         </li>
       </ul>
     </nav>

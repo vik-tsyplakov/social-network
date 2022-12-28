@@ -5,8 +5,11 @@ import "./DialogItem.css";
 export default function DialogItem(props) {
   let path = "/dialogs/" + props.id;
   return (
-    <div className="dialog__item">
-      <NavLink to={path}>{props.name}</NavLink>
+    <div>
+      <NavLink className={"dialog__item"} to={path}>
+        <img src={props.photo} alt="friend" />
+        <p>{props.name}</p>
+      </NavLink>
     </div>
   );
 }
