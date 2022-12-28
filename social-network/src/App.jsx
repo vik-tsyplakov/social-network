@@ -13,7 +13,7 @@ function App(props) {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navbar />
+        <Navbar dialogsData={props.state.dialogsPage.dialogsData} />
         <div className="app-content content">
           <Routes>
             <Route

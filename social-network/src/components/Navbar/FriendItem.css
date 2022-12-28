@@ -1,0 +1,10 @@
+.friend__item {
+  margin-bottom: 5px;
+  align-items: center;
+  display: flex;
+}
+.friend__item img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}

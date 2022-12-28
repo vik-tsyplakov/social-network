@@ -1,8 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import FriendItem from "./FriendItem";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  let friendsElements = props.dialogsData.map((friend) => (
+    <FriendItem name={friend.name} key={friend.id} photo={friend.photo} />
+  ));
+
   return (
     <nav className="nav">
       <ul>
@@ -30,11 +35,14 @@ export default function Navbar() {
           <NavLink className="nav__link" to="/setting">
             Setting
           </NavLink>
-          <li>
-            <NavLink className="nav__link" to="/friends">
-              Friends
-            </NavLink>
-          </li>
+        </li>
+        <li>
+          <NavLink className="nav__link " to="/friends">
+            <div className="friends__block">
+              <p className="friends__block_text">Friends</p>
+              {friendsElements}
+            </div>
+          </NavLink>
         </li>
       </ul>
     </nav>

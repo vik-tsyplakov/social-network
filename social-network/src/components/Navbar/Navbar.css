@@ -5,3 +5,10 @@
 .nav__link:hover {
   color: rgb(88, 88, 228);
 }
+.friends__block_text {
+  margin-bottom: 15px;
+}
+.friends__block {
+  margin-top: 25px;
+  align-items: center;
+}
