@@ -1,4 +1,14 @@
+import { rerenderEntireTree } from "./../render";
 // Data for App
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 5,
+    message: postMessage,
+    likesCount: 0,
+  };
+  state.profilePage.postsData.push(newPost);
+  rerenderEntireTree(state);
+};
 
 let state = {
   profilePage: {

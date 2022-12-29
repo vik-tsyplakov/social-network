@@ -19,7 +19,10 @@ function App(props) {
             <Route
               path="/profile"
               element={
-                <Profile postsData={props.state.profilePage.postsData} />
+                <Profile
+                  postsData={props.state.profilePage.postsData}
+                  addPost={props.addPost}
+                />
               }
             />
             <Route
