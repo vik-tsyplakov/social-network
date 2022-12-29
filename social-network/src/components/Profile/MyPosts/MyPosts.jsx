@@ -20,12 +20,24 @@ export default function MyPosts(props) {
     newPostElement.current.value = "";
   };
 
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.updateNewPostText(text);
+  };
+
   return (
     <div className="myPosts">
       <p>My posts</p>
       <div className="newPost">
         <div className="">
-          <textarea name="" ref={newPostElement} cols="30" rows="10"></textarea>
+          <textarea
+            name=""
+            ref={newPostElement}
+            cols="30"
+            rows="10"
+            onChange={onPostChange}
+            value={props.newPostText}
+          />
         </div>
         <button onClick={addPost}>Add post</button>
       </div>
