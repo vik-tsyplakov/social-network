@@ -18,9 +18,16 @@ export default function Dialogs(props) {
   ));
 
   let newMessageElement = React.createRef();
+
   let addMessage = () => {
     let text = newMessageElement.current.value;
-    alert(text);
+    props.addMessage(text);
+    newMessageElement.current.value = "";
+  };
+
+  let onMessageChange = () => {
+    let text = newMessageElement.current.value;
+    props.updateMessageText(text);
   };
 
   return (
@@ -36,7 +43,9 @@ export default function Dialogs(props) {
               ref={newMessageElement}
               cols="30"
               rows="10"
-            ></textarea>
+              onChange={onMessageChange}
+              value={props.newMessageText}
+            />
             <button onClick={addMessage}>New Message</button>
           </div>
         </div>

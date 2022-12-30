@@ -1,5 +1,5 @@
 import { rerenderEntireTree } from "./../render";
-// Data for App
+// Functions for posts
 export let addPost = () => {
   let newPost = {
     id: 5,
@@ -15,6 +15,22 @@ export let updateNewPostText = (newText) => {
   rerenderEntireTree(state);
 };
 
+// Functions for messages
+export let addMessage = () => {
+  let newMessage = {
+    id: 7,
+    message: state.dialogsPage.newMessageText,
+  };
+  state.dialogsPage.messagesData.push(newMessage);
+  rerenderEntireTree(state);
+};
+
+export let updateMessageText = (newMessage) => {
+  state.dialogsPage.newMessageText = newMessage;
+  rerenderEntireTree(state);
+};
+
+// Data
 let state = {
   profilePage: {
     postsData: [
@@ -72,7 +88,9 @@ let state = {
       { id: 5, message: "Have a good day!" },
       { id: 6, message: "I like it" },
     ],
+    newMessageText: "",
   },
 };
 
+window.state = state;
 export default state;

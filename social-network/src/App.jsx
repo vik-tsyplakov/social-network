@@ -33,6 +33,9 @@ function App(props) {
                 <Dialogs
                   dialogsData={props.state.dialogsPage.dialogsData}
                   messagesData={props.state.dialogsPage.messagesData}
+                  newMessageText={props.newMessageText}
+                  addMessage={props.addMessage}
+                  updateMessageText={props.updateMessageText}
                 />
               }
             />
