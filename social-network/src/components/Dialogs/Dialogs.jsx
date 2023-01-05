@@ -21,13 +21,15 @@ export default function Dialogs(props) {
 
   let addMessage = () => {
     let text = newMessageElement.current.value;
-    props.addMessage(text);
+    let action = { type: "ADD-MESSAGE" };
+    props.dispatch(action);
     newMessageElement.current.value = "";
   };
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.updateMessageText(text);
+    let action = { type: "UPDATE-MESSAGE-TEXT", newMessage: text };
+    props.dispatch(action);
   };
 
   return (

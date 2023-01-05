@@ -16,7 +16,7 @@ export default function Profile(props) {
           postsData={props.postsData}
           addPost={props.addPost}
           newPostText={props.newPostText}
-          updateNewPostText={props.updateNewPostText}
+          dispatch={props.dispatch}
         />
       </div>
     </div>
