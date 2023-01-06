@@ -14,7 +14,6 @@ export default function Profile(props) {
         <ProfileInfo />
         <MyPosts
           postsData={props.postsData}
-          addPost={props.addPost}
           newPostText={props.newPostText}
           dispatch={props.dispatch}
         />

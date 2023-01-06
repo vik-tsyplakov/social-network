@@ -77,6 +77,7 @@ let store = {
         likesCount: 0,
       };
       this._state.profilePage.postsData.push(newPost);
+      this._state.profilePage.newPostText = "";
       this._callSubscriber(this._state);
     } else if (action.type === "UPDATE-NEW-POST-TEXT") {
       this._state.profilePage.newPostText = action.newText;
@@ -87,6 +88,7 @@ let store = {
         message: this._state.dialogsPage.newMessageText,
       };
       this._state.dialogsPage.messagesData.push(newMessage);
+      this._state.dialogsPage.newMessageText = "";
       this._callSubscriber(this._state);
     } else if (action.type === "UPDATE-MESSAGE-TEXT") {
       this._state.dialogsPage.newMessageText = action.newMessage;
@@ -96,3 +98,4 @@ let store = {
 };
 
 export default store;
+window.state = store;

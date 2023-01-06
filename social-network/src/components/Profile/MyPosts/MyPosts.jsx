@@ -17,7 +17,6 @@ export default function MyPosts(props) {
   let addPost = () => {
     let action = { type: "ADD-POST" };
     props.dispatch(action);
-    newPostElement.current.value = "";
   };
 
   let onPostChange = () => {
@@ -32,7 +31,6 @@ export default function MyPosts(props) {
       <div className="newPost">
         <div className="">
           <textarea
-            name=""
             ref={newPostElement}
             cols="30"
             rows="10"

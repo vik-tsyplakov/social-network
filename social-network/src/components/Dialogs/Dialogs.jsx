@@ -20,10 +20,9 @@ export default function Dialogs(props) {
   let newMessageElement = React.createRef();
 
   let addMessage = () => {
-    let text = newMessageElement.current.value;
     let action = { type: "ADD-MESSAGE" };
-    props.dispatch(action);
     newMessageElement.current.value = "";
+    props.dispatch(action);
   };
 
   let onMessageChange = () => {
