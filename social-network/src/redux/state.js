@@ -115,5 +115,18 @@ export const updateNewPostTextActionCreator = (text) => {
   };
 };
 
+export const addMessageActionCreator = () => {
+  return {
+    type: ADD_MESSAGE,
+  };
+};
+
+export const updateMessageTextActionCreator = (text) => {
+  return {
+    type: UPDATE_MESSAGE_TEXT,
+    newMessage: text,
+  };
+};
+
 export default store;
 window.state = store;
