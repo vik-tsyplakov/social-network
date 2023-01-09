@@ -41,12 +41,12 @@ export default function Dialogs(props) {
           {messagesElements}
           <div className="">
             <textarea
-              name=""
               ref={newMessageElement}
               cols="30"
               rows="10"
               onChange={onMessageChange}
               value={props.newMessageText}
+              placeholder="Enter your message"
             />
             <button onClick={addMessage}>New Message</button>
           </div>

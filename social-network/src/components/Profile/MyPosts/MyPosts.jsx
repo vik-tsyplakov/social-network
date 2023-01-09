@@ -38,6 +38,7 @@ export default function MyPosts(props) {
             rows="10"
             onChange={onPostChange}
             value={props.newPostText}
+            placeholder="Enter your post"
           />
         </div>
         <button onClick={addPost}>Add post</button>
