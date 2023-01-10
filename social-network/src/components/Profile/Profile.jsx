@@ -1,5 +1,5 @@
 import React from "react";
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import "./Profile.css";
 import bird from "./../../img/mainContent/bird.jpg";
@@ -12,11 +12,7 @@ export default function Profile(props) {
       </div>
       <div>
         <ProfileInfo />
-        <MyPosts
-          postsData={props.postsData}
-          newPostText={props.newPostText}
-          dispatch={props.dispatch}
-        />
+        <MyPostsContainer store={props.store} />
       </div>
     </div>
   );
