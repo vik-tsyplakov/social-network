@@ -7,6 +7,6 @@ let reducers = combineReducers({
   dialogsPage: dialogsReducer,
 });
 
-let store = legacy_createStore();
+let store = legacy_createStore(reducers);
 
 export default store;
