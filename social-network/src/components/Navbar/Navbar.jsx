@@ -4,7 +4,8 @@ import "./Navbar.css";
 import FriendItem from "./FriendItem";
 
 export default function Navbar(props) {
-  let friendsElements = props.dialogsData.map((friend) => (
+  let state = props.store.getState().dialogsPage.dialogsData;
+  let friendsElements = state.map((friend) => (
     <FriendItem name={friend.name} key={friend.id} photo={friend.photo} />
   ));
 
