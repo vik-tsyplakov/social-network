@@ -12,7 +12,7 @@ export default function Profile(props) {
       </div>
       <div>
         <ProfileInfo />
-        <MyPostsContainer store={props.store} />
+        <MyPostsContainer />
       </div>
     </div>
   );

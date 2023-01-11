@@ -4,10 +4,14 @@ import "./Navbar.css";
 import FriendItem from "./FriendItem";
 
 export default function Navbar(props) {
+  {
+    /*
   let state = props.store.getState().dialogsPage.dialogsData;
   let friendsElements = state.map((friend) => (
     <FriendItem name={friend.name} key={friend.id} photo={friend.photo} />
   ));
+  */
+  }
 
   return (
     <nav className="nav">
@@ -37,6 +41,7 @@ export default function Navbar(props) {
             Setting
           </NavLink>
         </li>
+        {/*
         <li>
           <NavLink className="nav__link " to="/friends">
             <div className="friends__block">
@@ -45,6 +50,7 @@ export default function Navbar(props) {
             </div>
           </NavLink>
         </li>
+        */}
       </ul>
     </nav>
   );
