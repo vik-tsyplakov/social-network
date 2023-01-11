@@ -8,7 +8,8 @@ import {
 } from "./../../redux/dialogsReducer";
 
 export default function Dialogs(props) {
-  let dialogsElements = props.dialogsData.map((dialog) => (
+  let state = props.store.getState().dialogsPage;
+  let dialogsElements = state.dialogsData.map((dialog) => (
     <DialogItem
       name={dialog.name}
       key={dialog.id}
@@ -17,19 +18,19 @@ export default function Dialogs(props) {
     />
   ));
 
-  let messagesElements = props.messagesData.map((message) => (
+  let messagesElements = state.messagesData.map((message) => (
     <Message message={message.message} key={message.id} id={message.id} />
   ));
 
-  let newMessageElement = React.createRef();
+  let newMessageElement = state.newMessageElement;
 
   let addMessage = () => {
-    props.dispatch(addMessageActionCreator());
+    props.store.dispatch(addMessageActionCreator());
   };
 
-  let onMessageChange = () => {
-    let text = newMessageElement.current.value;
-    props.dispatch(updateMessageTextActionCreator(text));
+  let onMessageChange = (e) => {
+    let text = e.target.value;
+    props.store.dispatch(updateMessageTextActionCreator(text));
   };
 
   return (
@@ -45,7 +46,7 @@ export default function Dialogs(props) {
               cols="30"
               rows="10"
               onChange={onMessageChange}
-              value={props.newMessageText}
+              value={state.newMessageText}
               placeholder="Enter your message"
             />
             <button onClick={addMessage}>New Message</button>
